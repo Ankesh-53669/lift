@@ -1,0 +1,131 @@
+:root {
+  /* Font and global settings */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Dark theme colors */
+  color-scheme: dark;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #1e1e2e;
+  --link-color: #80cbc4;
+  --link-hover-color: #4dd0e1;
+  --button-bg: #33334d;
+  --button-hover-bg: #575775;
+  --button-border-color: #80cbc4;
+
+  /* Smoothing and rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Centered container with padding */
+.container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Styling for large headings */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Paragraph for description */
+p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 2rem;
+}
+
+/* Link styling */
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Button styling */
+button {
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-color);
+  background-color: var(--button-bg);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  border-color: var(--button-border-color);
+}
+
+/* Focus styling for buttons */
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #1e1e2e;
+    --background-color: #ffffff;
+    --link-color: #005f73;
+    --link-hover-color: #0a9396;
+    --button-bg: #eeeeff;
+    --button-hover-bg: #ccccff;
+    --button-border-color: #005f73;
+  }
+
+  body {
+    background-color: var(--background-color);
+  }
+
+  .container {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
